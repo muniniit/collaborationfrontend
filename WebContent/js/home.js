@@ -1077,8 +1077,8 @@ Chatbucket.controller("chatController",function($scope,$http,ChatService,$rootSc
 							var comment=
 								{
 									blogid:$scope.commentblog.blog_id,
-									name:$rootScope.uname,
-									comment:$scope.commentblog.Comment
+									name:$rootScope.title,
+									blog_comment:$scope.commentblog.Comment
 								};
 							$http.post('http://localhost:2020/Chatbucket/addComment',comment);
 							 $http.get("http://localhost:2020/Chatbucket/viewBlogs")
